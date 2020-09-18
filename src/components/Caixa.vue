@@ -14,7 +14,7 @@
                         </div>
                         <div class="status">
                             <div v-for="(cor, indice) in elemento.cor" :key="indice" 
-                                   :style="{ width: '30px', height: '10px', borderRadius: '5px', marginLeft: '5px', backgroundColor: cor}" />
+                            :style="{ width: '30px', height: '10px', borderRadius: '5px', marginLeft: '5px', backgroundColor: cor}" />
                         </div>
                     </div>
                 </div>
@@ -34,9 +34,9 @@
                 habilitado: true,
                 arrastando: false,
                 item: [
-                    { id: 100, titulo: "Desenvolvedor API", categoria: 'green', cor: ['purple'], usuarios: ['user-3.jpg', 'user-1.jpg']}
+                    { id: 100, titulo: 'Desenvolvedor API', categoria: 'green', cor: ['purple'], usuarios: ['user-3.jpg', 'user-1.jpg']}
                 ]
-            };
+            }
         },
         props: {
             tarefas: { type: Array, required: true }

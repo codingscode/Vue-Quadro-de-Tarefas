@@ -28,7 +28,7 @@
         },
         methods: {
             adicionar() {
-                this.$emit('add')
+                this.$emit('adic')
             }
         }
     }

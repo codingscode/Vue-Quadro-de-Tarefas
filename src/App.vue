@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <div v-for="(item, indice) in tarefas" :key="indice">
-            <Painel :painel="tarefas" :titulo="item.titulo" :itens="item.itens" @add="adicionar(indice)" />
+        <div v-for="(cada, indice) in tarefas" :key="indice">
+            <Painel :painel="tarefas" :titulo="cada.titulo" :itens="cada.itens" @adic="adicionar(indice)" />
         </div>
     </div>
 </template>
@@ -20,9 +20,9 @@
                     {
                         titulo: 'Fazendo',
                         itens : [
-                            { id: id++, titulo: 'Design UX Flows', categoria: 'purple', cor: ['purple'], usuarios: ['user-1.jpg', 'user-2.jpg'] },
+                            { id: id++, titulo: 'Design UX Flows', categoria: 'purple', cor: ['purple'], usuarios: ['user-1.jpg', 'user-2.png'] },
                             { id: id++, titulo: 'Launch Website', categoria: 'yellow', cor: ['yellow', 'red'], usuarios: ['user-3.jpg'] },
-                            { id: id++, titulo: 'Encontro de Cliente', categoria: 'red', cor: ['blue'], usuarios: ['user-2.jpg', 'user-4.jpg'] },
+                            { id: id++, titulo: 'Encontro de Cliente', categoria: 'red', cor: ['blue'], usuarios: ['user-2.png', 'user-4.jpg'] },
                             { id: id++, titulo: 'Lançar Build', categoria: 'blue', cor: ['green'], usuarios: ['user-4.jpg'] },
                             { id: id++, titulo: 'Desenvolver API', categoria: 'green', cor: ['purple'], usuarios: ['user-3.jpg', 'user-1.jpg'] }
                         ]
@@ -34,7 +34,7 @@
         methods: {
             adicionar(indice) {
                 this.tarefas[indice].itens.push(
-                    {id: id++, titulo: 'Final Tests', categoria: 'gray', cor: ['red'], usuarios: ['user-5.jpg', 'user-1.jpg']}
+                    {id: id++, titulo: 'Testes Finais', categoria: 'gray', cor: ['red'], usuarios: ['user-5.png', 'user-1.jpg']}
                 )
             }
         }
